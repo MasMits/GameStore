@@ -1,0 +1,46 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #171717;
+}
+
+
+#root{
+  height: 100vh;
+}
+
+.app{
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.large_cards{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+//.large_cards > MediaCard{
+//  align-items: flex-start;
+//  padding: 0px;
+//
+//  position: absolute;
+//  width: 368px;
+//  height: 463px;
+//  left: 137px;
+//  top: 1401px;
+//
+//  background: #1C1B1B;
+//  border: 1px solid #929090;
+//  border-radius: 12px;
+//}
