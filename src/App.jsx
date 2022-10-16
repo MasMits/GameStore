@@ -3,6 +3,7 @@ import './styles/App.css';
 import Header from "./components/Header";
 import HugeCardContainer from "./components/card_container/HugeCardContainer";
 import LargeCardContainer from "./components/card_container/LargeCardContainer";
+import MediumCardContainer from "./components/card_container/MediumCardContainer";
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
         <div id="header"><Header/></div>
         <HugeCardContainer data={games}/>
         <LargeCardContainer games={games}/>
+        <MediumCardContainer games={games}/>
     </div>
   );
 }

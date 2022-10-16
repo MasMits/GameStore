@@ -34,6 +34,11 @@ body{
   gap: 10px;
 }
 
+.medium_cards{
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
 .HugeCardContainer{
   display:flex;
   justify-content:space-between;
@@ -46,4 +51,14 @@ body{
   display:flex;
   flex-direction: column;
   gap: 12px;
+}
+.arrows_container{
+  display: flex;
+  gap: 16px;
+}
+.MediumCardContainer{
+  padding: 24px;
+  .header{
+    padding-bottom: 24px;
+  }
 }
