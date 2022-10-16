@@ -9,56 +9,32 @@ import { createTheme } from '@mui/material/styles';
 import {ThemeProvider} from "@mui/material";
 
 
-// interface data{
-//     id: number;
-//     type: string;
-//     game_name: string;
-//     short_description: string;
-//     header_image: string;
-//     website: string;
-// }
 
 
-export default function MediaCard({id, data}) {
-    // const theme = createTheme({
-    //     palette: {
-    //         primary: {
-    //             light: '#757ce8',
-    //             main: '#3f50b5',
-    //             dark: '#002884',
-    //             contrastText: '#fff',
-    //         },
-    //         secondary: {
-    //             light: '#ff7961',
-    //             main: '#f44336',
-    //             dark: '#ba000d',
-    //             contrastText: '#000',
-    //         },
-    //     },
-    // });
+export default function HugeCard({id, data}) {
     const darkTheme = createTheme({
         components: {
             // Name of the component
         },
         palette: {
             mode: 'dark',
-                primary: {
-                    light: '#757ce8',
-                    main: '#ababab',
-                    dark: '#c9c9c9',
-                    contrastText: '#fff',
-                },
-                secondary: {
-                    light: '#ff7961',
-                    main: '#f44336',
-                    dark: '#ba000d',
-                    contrastText: '#000',
-                },
+            primary: {
+                light: '#757ce8',
+                main: '#ababab',
+                dark: '#c9c9c9',
+                contrastText: '#2F3131',
+            },
+            secondary: {
+                light: '#ff7961',
+                main: '#f44336',
+                dark: '#ba000d',
+                contrastText: '#000',
+            },
         },
     });
     return (
         <ThemeProvider theme={darkTheme}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 868, maxHeight: 580 }}>
                 <CardMedia
                     component="img"
                     height="243"
@@ -74,10 +50,10 @@ export default function MediaCard({id, data}) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button  variant="outlined" size="small">Learn more</Button>
+                    <Button  variant="outlined" size="small">+ Add to wishlist</Button>
+                    <Button  variant="contained" size="small">Learn more</Button>
                 </CardActions>
             </Card>
         </ThemeProvider>
-
     );
 }

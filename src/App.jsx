@@ -1,6 +1,8 @@
 import React from 'react';
-import './test.css';
-import MediaCard from "./Card";
+import './styles/App.css';
+import Header from "./components/Header";
+import HugeCardContainer from "./components/card_container/HugeCardContainer";
+import LargeCardContainer from "./components/card_container/LargeCardContainer";
 
 function App() {
 
@@ -39,11 +41,9 @@ function App() {
 
   return (
     <div className="app">
-        <div className="large_cards">
-            {games.map((item) =>
-                <MediaCard variant="outlined" id={item.data.id} data={item.data} />
-            )}
-        </div>
+        <div id="header"><Header/></div>
+        <HugeCardContainer data={games}/>
+        <LargeCardContainer games={games}/>
     </div>
   );
 }
