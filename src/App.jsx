@@ -38,7 +38,18 @@ function App() {
                 website: "http://www.teamfortress.com/",
             }
         },
+        {
+            data: {
+                id: 4,
+                type: "game",
+                game_name: "It Takes Two",
+                short_description: "Исследуй земли, полные легенд, древних сил и яростных монстров. В изометрическом экшене TUNIC тебе предстоит большое путешествие в роли маленького лисенка. Ты просыпаешься среди руин, и все, что у тебя есть, — это любопытство. Сражайся с чудовищами, собирай волшебные предметы и раскрывай древние тайны.\n",
+                header_image: "https://gmedia.playstation.com/is/image/SIEPDC/it-takes-two-store-art-01-ps4-ps5-en-29jan21?$1200px$",
+                website: "http://www.teamfortress.com/",
+            }
+        },
     ];
+
 
   return (
     <div className="app">
