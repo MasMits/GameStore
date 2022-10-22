@@ -6,11 +6,16 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import {ThemeProvider} from "@mui/material";
-// import MenuIcon from '@mui/icons-material/Menu';
-// import SearchIcon from '@mui/icons-material/Search';
+import {Avatar, Chip, ThemeProvider} from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
+import { SvgIcon } from '@mui/material';
+import Button from "@mui/material/Button";
+import { ReactComponent as StarIcon } from '../img/epic-games.svg';
+import SettingsIcon from '@mui/icons-material/Settings';
+
 
 const darkTheme = createTheme({
+    zIndex: '15000px',
     components: {
         // Name of the component
     },
@@ -76,35 +81,30 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchAppBar() {
     return (
         <ThemeProvider theme={darkTheme}>
-            <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
-                    <Toolbar>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="open drawer"
-                            sx={{ mr: 2 }}
-                        >
-                            {/*<MenuIcon />*/}
-                        </IconButton>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                        >
-                            MUI
-                        </Typography>
+            <Box sx={{ flexGrow: 1, zIndex: 1100 }}>
+                <AppBar  position="static">
+                    <Toolbar sx={{ display: "flex", zIndex: 15000000, gap: 4}}>
+                        <SvgIcon paddingLeft="30px" component={StarIcon} viewBox="0 0 36 36"/>
                         <Search>
                             <SearchIconWrapper>
-                                {/*<SearchIcon />*/}
+                                <SearchIcon />
                             </SearchIconWrapper>
                             <StyledInputBase
                                 placeholder="Search…"
                                 inputProps={{ 'aria-label': 'search' }}
                             />
                         </Search>
+                        <Button>Discover</Button>
+                        <Button>Browse</Button>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+                        </Typography>
+                        <Chip avatar={<Avatar>M</Avatar>} label="Avatar" />
+                        <SettingsIcon/>
                     </Toolbar>
                 </AppBar>
             </Box>
